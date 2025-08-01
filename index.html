@@ -4,18 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+   
+   
+   <style>
+    body{
+  
+    
+    font-family: arial sans-serif;
+
+    background: #151433;
+    background: linear-gradient(90deg, rgba(21, 20, 51, 1) 0%, rgba(9, 9, 121, 1) 19%, rgba(4, 115, 191, 1) 61%, rgba(2, 168, 226, 1) 82%, rgba(0, 212, 255, 1) 100%);
+display:flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin:0;
+    }
+
+    .container{
+background-color: rgb(141, 121, 121);
+padding: 30px;
+color: white;
+border-radius: 20px;
+text-align: center;
+width: 350px;
+height: 200px;
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    }
+    input[type="pasword"],
+    input[type="tex"]{
+      width: 85%;
+font-size: 18px;
+padding: 10px 40px 10px 10px;
+border:1px;
+border-radius: 1px solid#ccc;
+margin-top: 15px;
+margin-bottom: 15px;
+    }
+
+
+
+#btn_validate{
+  background-color:aquamarine;
+  border:none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor:pointer;
+
+  transition:o,5 all;
+
+
+}
+
+#btn_validate:hover
+{
+background-color: aliceblue;
+border:none;
+color:white;
+transform: scale(1,1);
+
+}
+    .toggle_pasword{
+position:absolute;
+cursor:pointer;
+top: 50%;
+right: 10%;
+transform:  translate(-50); 
+color: #888;
+
+
+    }
+    .inputs{
+position: relative;
+width:100%
+
+    }
+    </style>
   </head>
   <body onload="onloadpage()">
     
     <div class="container">
-        <h1>"rubencarrillo"</h1>
+        
         <h2>validador de contrasenias</h2>
         <div class="inputs">
             <input type="pasword" id="password" placeholder="ingrese la contrasenia">
-<i> </i>
+            <i class="fa-solid fa-eye"></i>
 
         </div>
-        <button onmousemove ="validar()">validar</button> 
+        <button  id= "btn_validate"onclick ="validar()">validar</button> 
 
 
     </div>
@@ -37,6 +118,21 @@
   timer:3000
 });
 }
+//declaracion de variables
+const toggle_pasword= document.getElementById("toggle_paswor");
+const pasword=document.getElementById("password");
+// logica de show/hide pasword
+toggle_pasword.addEventListener("click",()=>{
+const type=pasword.type==="password" ? "text": "password";
+password.type=type;
+
+toggle_pasword.classList.toggle("fa-eye")
+toggle_pasword.classList.toggle("fa-eye-slash")
+
+
+
+});
+
 </script>
 
 
