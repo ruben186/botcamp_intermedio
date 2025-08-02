@@ -35,8 +35,8 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
     }
-    input[type="pasword"],
-    input[type="tex"]{
+    input[type="password"],
+    input[type="text"]{
       width: 85%;
 font-size: 18px;
 padding: 10px 40px 10px 10px;
@@ -69,11 +69,11 @@ color:white;
 transform: scale(1,1);
 
 }
-    .toggle_pasword{
+    .toggle_password{
 position:absolute;
 cursor:pointer;
-top: 50%;
-right: 10%;
+top: 40%;
+right: 5%;
 transform:  translate(-50); 
 color: #888;
 
@@ -93,7 +93,7 @@ width:100%
         <h2>validador de contrasenias</h2>
         <div class="inputs">
             <input type="password" id="password" placeholder="ingrese la contrasenia">
-            <i class="fa-solid fa-eye toggle_pasword"id="toggle_password">
+            <i class="fa-solid fa-eye toggle_password"id="toggle_password">
               
             </i>
 
@@ -104,12 +104,8 @@ width:100%
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        
+   
 
-        function validar(){
-
-            alert ("BIENVENIDO AL SISTEMA");
-                    }
 
         function onloadpage(){
             Swal.fire({
@@ -131,9 +127,49 @@ password.type=type;
 toggle_password.classList.toggle("fa-eye")
 toggle_password.classList.toggle("fa-eye-slash")
 
-
-
 });
+
+function validar(){
+
+let password    = document.getElementById("password").value;
+let lowercase   = /[a-z]/.test(password);
+let uppercase   = /[A-Z]/.test(password);
+let number      = /\d/.test(password);
+let specialchar = /[\W_]/.test(password);
+
+if(password.length < 8){
+  swal.fire(
+    "Error", "lacontrasenia debe tener 8 caracteres","error"
+  );
+  return
+}
+
+if (lowercase && uppercase && specialchar && number){
+
+swal.fire(
+    "correcto", "lacontrasenia  cumple.",
+    "success"
+)}
+
+else{
+swal.fire({
+  icon: "error",
+title: "lacontrasenia invalida",
+
+html:`
+<ul>
+
+<li>${number ? "👍" :"❌"} al menos un numero</li>
+<li>${lowercase ? "👍" :"❌"} al menos un numero</li>
+<li>${uppercase ? "👍" :"❌"} al menos un numero</li>
+<li>${specialchar ? "👍" :"❌"} al menos un numero</li>
+
+ 
+</ul>`
+
+})
+}
+}
 
 </script>
 
