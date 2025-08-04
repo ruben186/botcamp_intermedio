@@ -1,0 +1,33 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="../css/vendor/font-awosome.min.css">
+   <link rel="stylesheet"href="../css/validater/validater.css">
+   
+   
+  </head>
+  <body onload="onloadpage()">
+    
+    <div class="container">
+        
+        <h2>validador de contrasenias</h2>
+        <div class="inputs">
+            <input type="password" id="password" placeholder="ingrese la contrasenia">
+            <i class="fa-solid fa-eye toggle_password"id="toggle_password">
+              
+            </i>
+
+        </div>
+        <button  id= "btn_validate"onclick ="validar()">validar</button> 
+
+
+    </div>
+    <!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+   
+    <script src="../js/vendor/sweetalert2.js"></script>
+    <script src="../js/validater/valiadter.js"></script>
+  </body>
+  </html>                      

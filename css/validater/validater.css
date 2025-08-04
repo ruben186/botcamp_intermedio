@@ -1,0 +1,76 @@
+body{
+  
+    
+    font-family: arial sans-serif;
+
+    background: #151433;
+    background: linear-gradient(90deg, rgba(21, 20, 51, 1) 0%, rgba(9, 9, 121, 1) 19%, rgba(4, 115, 191, 1) 61%, rgba(2, 168, 226, 1) 82%, rgba(0, 212, 255, 1) 100%);
+display:flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin:0;
+    }
+
+    .container{
+background-color: rgb(121, 132, 141);
+padding: 30px;
+color: white;
+border-radius: 20px;
+text-align: center;
+width: 350px;
+height: 200px;
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    }
+    input[type="password"],
+    input[type="text"]{
+      width: 85%;
+font-size: 18px;
+padding: 10px 40px 10px 10px;
+border:1px;
+border-radius: 1px solid#ccc;
+margin-top: 15px;
+margin-bottom: 15px;
+    }
+
+
+
+#btn_validate{
+  background-color:aquamarine;
+  border:none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor:pointer;
+
+  transition:o,5 all;
+
+
+}
+
+#btn_validate:hover
+{
+background-color: aliceblue;
+border:none;
+color:white;
+transform: scale(1,1);
+
+}
+    .toggle_password{
+position:absolute;
+cursor:pointer;
+top: 40%;
+right: 5%;
+transform:  translate(-50); 
+color: #888888;
+
+
+    }
+    .inputs{
+position: relative;
+width:100%
+
+    }
