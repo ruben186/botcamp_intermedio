@@ -1,0 +1,58 @@
+   body{
+ 
+    font-family: arial sans-serif;
+
+    background: #151433;
+    background: linear-gradient(90deg, rgba(21, 20, 51, 1) 0%, rgba(9, 9, 121, 1) 19%, rgba(4, 115, 191, 1) 61%, rgba(2, 168, 226, 1) 82%, rgba(0, 212, 255, 1) 100%);
+display:flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin:0;
+    }
+
+.card{
+background-color: #fff;
+padding: 2rem;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap:10px;
+align-items: center;
+
+}
+
+input [type="date"]{
+padding: 10px;
+font-size: 16px;
+border: 1px solid #000;
+border-radius: 10px;
+margin-bottom: 20px;
+
+}
+
+  button {
+    background-color:aquamarine;
+    border:none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor:pointer;
+  
+    transition:o,5 all;
+  
+  
+  }
+  
+  button:hover
+  {
+  background-color: #4b4b4b;
+  
+  color:white;
+  
+  
+  }
+  a{
+    text-decoration: none;
+    color: white
+  }
